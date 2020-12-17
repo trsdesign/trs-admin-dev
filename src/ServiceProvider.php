@@ -31,9 +31,7 @@ class ServiceProvider extends BaseServiceProvider
         $this->configurePublishing();
         $this->configureCommands();
 
-        if (file_exists(config_path('trs-admin.php'))) {
-            $this->configureComponents(config('trs-admin.css_preset'));
-        }
+        $this->configureComponents(config('trs-admin.css_preset'));
 
         Blade::component('trs::bootstrap.components.form', 'trs-form');
     }
