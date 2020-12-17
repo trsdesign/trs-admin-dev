@@ -1,4 +1,4 @@
-@props(['method', 'fields'])
+@props(['method'])
 
 <div class="h-100 w-100 d-flex align-items-center justify-content-between">
     <div class="mx-auto w-11/12 p-5 bg-white sm:w-8/12 md:w-1/2 lg:w-5/12 shadow">

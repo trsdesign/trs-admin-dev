@@ -1,4 +1,4 @@
-@props(['method', 'fields'])
+@props(['method'])
 
 @props(['method', 'fields'])
 
