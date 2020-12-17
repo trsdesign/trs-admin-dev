@@ -41,6 +41,8 @@ class InstallCommand extends Command
 
         $this->{$this->argument('stack')}();
 
+        
+
         $this->line('');
         $this->info('TRS Admin resources installed successfully.');
         $this->comment('Please execute "npm install && npm run dev" to build your assets.');
@@ -55,11 +57,11 @@ class InstallCommand extends Command
     {
         $this->updateNodePackages(function ($packages) {
             return [
-                'bootstrap' => '^4.0.0',
-                'jquery' => '^3.2',
-                'popper.js' => '^1.12',
-                'sass' => '^1.15.2',
-                'sass-loader' => '^8.0.0',
+                'bootstrap' => '^4.5.0',
+                'jquery' => '^3.5',
+                'popper.js' => '^1.16',
+                'sass' => '^1.30.0',
+                'sass-loader' => '^10.0.0',
             ] + $packages;
         });
 
