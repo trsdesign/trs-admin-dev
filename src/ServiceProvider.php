@@ -77,6 +77,10 @@ class ServiceProvider extends BaseServiceProvider
         $this->publishes([
             __DIR__.'/../config/trs-admin.php' => config_path('trs-admin.php'),
         ], 'trs-admin-config');
+
+        $this->publishes([
+            __DIR__.'/../resources/views' => resource_path('views/vendor/trs-admin'),
+        ], 'trs-admin-views');
     }
 
     /**
