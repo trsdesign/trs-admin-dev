@@ -14,7 +14,7 @@
 
     </head>
 
-    <body class="antialiased">
+    <body class="antialiased bg-gray-100">
         @include('trs::header')
 
         @include('trs::navigation-menu')
