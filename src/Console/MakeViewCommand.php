@@ -41,19 +41,13 @@ class MakeViewCommand extends Command
         $content = $this->choice('What will be the main content? ', ['blank', 'table', 'form'], 'blank');
         $content = $content.'.blade.php';
 
-        $title = $this->input('What title should the view have?');
-    
         (new Filesystem)->ensureDirectoryExists(resource_path('views/'.$resource));
 
         copy(__DIR__.'/../../stubs/resources/views/page.blade.php', resource_path('views/'.$resource.'/'.$resourceType));
 
         // File contents...
         $this->replaceInFile('@extends($layout)', '@extends(\'trs::'.$layout.'\')', resource_path('views/'.$resource.'/'.$resourceType));
-        $this->replaceInFile('{{ $content }}', file_get_contents(__DIR__.'../../resources/views/components.'.$content), resource_path('views/'.$resource.'/'.$resourceType));
-
-        // Table name...
-        if ($content == 'table.blade.php') {
-            $this->replaceInFile('{{ $name }}', $title, resource_path('views/'.$resource.'/'.$resourceType));
-        }
+    
+        // @TODO determine css preset and include content here
     }
 }
