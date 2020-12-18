@@ -1,5 +1,3 @@
-@props(['id'])
-
 <div class="bg-gray-100">
   <div class="grid min-h-screen place-items-center">
     <div class="w-11/12 p-12 bg-white sm:w-10/12 overflow-hidden shadow-md">

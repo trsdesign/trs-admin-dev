@@ -1,12 +1,10 @@
-@props(['method'])
-
 <div class="h-100 w-100 d-flex align-items-center justify-content-between">
     <div class="mx-auto w-11/12 p-5 bg-white sm:w-8/12 md:w-1/2 lg:w-5/12 shadow">
         @csrf
 
         <h1 class="h4 font-weight-bold">Hello there 👋, <span class="font-weight-normal">please fill in your information to continue</span></h1>
     
-        <form class="mt-3">
+        <form class="mt-3" method="POST">
             <div class="row">
                 <div class="form-group col-md-6">
                     <label for="firstname" class="">Firstname</label>

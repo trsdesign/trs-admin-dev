@@ -1,12 +1,8 @@
-@props(['method'])
-
-@props(['method', 'fields'])
-
 <div class="grid min-h-screen place-items-center">
     <div class="w-11/12 p-12 bg-white sm:w-8/12 md:w-1/2 lg:w-5/12 shadow-md">
         <h1 class="text-xl font-semibold">Hello there 👋, <span class="font-normal">please fill in your information to continue</span></h1>
     
-        <form class="mt-6 grid grid-cols-1 gap-1" >
+        <form class="mt-6 grid grid-cols-1 gap-1" method="POST">
             @crsf
             <div class="grid grid-cols-1 sm:grid-cols-2 justify-between gap-x-3">
                 <span class="col-span-1">
