@@ -79,7 +79,7 @@ class InstallCommand extends Command
         (new Filesystem)->ensureDirectoryExists(resource_path('views/partials'));
         (new Filesystem)->ensureDirectoryExists(resource_path('views/layouts'));
         
-        (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/resources/boostrap/views/partials', resource_path('views/layouts'));
+        (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/resources/boostrap/views/partials', resource_path('views/partials'));
         (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/resources/boostrap/views/layouts', resource_path('views/layouts'));
     }
 
@@ -113,7 +113,7 @@ class InstallCommand extends Command
         (new Filesystem)->ensureDirectoryExists(resource_path('views/partials'));
         (new Filesystem)->ensureDirectoryExists(resource_path('views/layouts'));
         
-        (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/resources/tailwind/views/partials', resource_path('views/layouts'));
+        (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/resources/tailwind/views/partials', resource_path('views/partials'));
         (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/resources/tailwind/views/layouts', resource_path('views/layouts'));
     }
 
