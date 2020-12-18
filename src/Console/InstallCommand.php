@@ -78,7 +78,7 @@ class InstallCommand extends Command
         copy(__DIR__.'/../../stubs/resources/bootstrap/js/bootstrap.js', resource_path('js/bootstrap.js'));
 
         // Files
-        (new Filesystem)->ensureDirectoryExists(resource_path('views/layouts'))
+        (new Filesystem)->ensureDirectoryExists(resource_path('views/layouts'));
         (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/resources/boostrap/views/layouts', resource_path('views/layouts'));
     }
 
@@ -105,20 +105,8 @@ class InstallCommand extends Command
         // Tailwind config...
         copy(__DIR__.'/../../stubs/resources/tailwind/tailwind.config.js', base_path('tailwind.config.js'));
 
-        // Webpack...
-        copy(__DIR__.'/../../stubs/resources/tailwind/webpack.mix.js', base_path('webpack.mix.js'));
-
-        // Sass...
-        (new Filesystem)->ensureDirectoryExists(resource_path('sass'));
-
-        copy(__DIR__.'/../../stubs/resources/tailwind/sass/_variables.scss', resource_path('sass/_variables.scss'));
-        copy(__DIR__.'/../../stubs/resources/tailwind/sass/app.scss', resource_path('sass/app.scss'));
-
-        // Bootstrapping...
-        copy(__DIR__.'/../../stubs/resources/tailwind/js/bootstrap.js', resource_path('js/bootstrap.js'));
-
         // Files
-        (new Filesystem)->ensureDirectoryExists(resource_path('views/layouts'))
+        (new Filesystem)->ensureDirectoryExists(resource_path('views/layouts'));
         (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/resources/tailwind/views/layouts', resource_path('views/layouts'));
     }
 
