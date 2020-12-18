@@ -19,11 +19,13 @@
     </head>
 
     <body class="bg-light h-100 w-100">
-        @include('trs::header')
+        @include('partials.header')
+
+        @include('partials.navigation-menu')
 
         @yield('content')
 
-        @include('trs::footer')
+        @include('partials.footer')
 
         @stack('footer-scripts')
     </body>
