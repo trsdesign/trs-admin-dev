@@ -4,7 +4,7 @@ return [
      
     /*
     |--------------------------------------------------------------------------
-    | TRS Admin CSS Preset
+    | TRS Admin Stack
     |--------------------------------------------------------------------------
     |
     | This configuration value informs Trs Admin which css "preset" you will be
@@ -13,5 +13,5 @@ return [
     |
     */
 
-    'css_preset' => 'bootstrap',
+    'stack' => 'bootstrap',
 ];

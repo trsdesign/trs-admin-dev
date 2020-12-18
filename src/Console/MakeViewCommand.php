@@ -31,6 +31,8 @@ class MakeViewCommand extends Command
      */
     public function handle()
     {
+        $stack = config('trs-admin.stack');
+
         $resource = $this->argument('resource');
 
         $resourceType = $this->choice('What type of view do you want to make?', ['index', 'show'], 'index');
@@ -43,11 +45,11 @@ class MakeViewCommand extends Command
 
         (new Filesystem)->ensureDirectoryExists(resource_path('views/'.$resource));
 
-        copy(__DIR__.'/../../stubs/resources/views/page.blade.php', resource_path('views/'.$resource.'/'.$resourceType));
+        copy(__DIR__.'/../../stubs/resources/'.$stack.'/views/page.blade.php', resource_path('views/'.$resource.'/'.$resourceType));
 
         // File contents...
         $this->replaceInFile('@extends($layout)', '@extends(\'trs::'.$layout.'\')', resource_path('views/'.$resource.'/'.$resourceType));
-    
-        // @TODO determine css preset and include content here
+
+        $this->replaceInFile('{{ $content }}', file_get_contents(__DIR__.'../../resources/'.$stack.'/'.$content), resource_path('views/'.$resource.'/'.$resourceType));
     }
 }

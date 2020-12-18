@@ -31,7 +31,7 @@ class ServiceProvider extends BaseServiceProvider
         $this->configurePublishing();
         $this->configureCommands();
 
-        $this->configureComponents(config('trs-admin.css_preset'));
+        $this->configureComponents(config('trs-admin.stack'));
 
         Blade::component('trs::bootstrap.components.form', 'trs-form');
     }
