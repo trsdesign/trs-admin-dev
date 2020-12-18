@@ -1,4 +1,4 @@
-# Trs Admin
+<img src="https://banners.beyondco.de/TRS%20Admin.png?theme=dark&packageManager=composer+require&packageName=trsdesign%2Ftrs-admin&pattern=morphingDiamonds&style=style_2&description=A+frontend+scaffolding+package+for+Laravel&md=1&showWatermark=0&fontSize=200px&images=save-as&widths=700&heights=700" alt="TRS Admin">
 
 <p align="center">
     <a href="https://github.com/trsdesign/trs-admin-dev/actions">
@@ -8,7 +8,7 @@
 
 ## Introduction
 
-TRS Admin is a frontend scaffolding package, allowing you publish an `index` or `show` blade file for a specified resource. TRS Admin has component presets for both [Tailwind CSS](https://tailwindcss.com) and [Bootstrap](http://getbootstrap.com).
+TRS Admin is a frontend scaffolding package for [Laravel](https://laravel.com), allowing you publish an `index` or `show` blade file for a specified resource. TRS Admin has component presets for both [Tailwind CSS](https://tailwindcss.com) and [Bootstrap](http://getbootstrap.com).
 
 ## Installation
 
