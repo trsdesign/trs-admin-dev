@@ -1,5 +1,5 @@
 <div class="grid min-h-screen place-items-center">
-    <x-trs-card>
+    <x-trs-card class="w-11/12 sm:w-8/12 md:w-1/2 lg:w-5/12">
         <x-slot name="title">
             Hello there 👋, <span class="font-normal">please fill in your information to continue</span>
         </x-slot>
