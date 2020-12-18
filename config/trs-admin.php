@@ -14,4 +14,4 @@ return [
     */
 
     'css_preset' => 'bootstrap',
-]
+];
