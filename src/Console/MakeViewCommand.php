@@ -48,7 +48,7 @@ class MakeViewCommand extends Command
         copy(__DIR__.'/../../stubs/resources/'.$stack.'/views/page.blade.php', resource_path('views/'.$resource.'/'.$resourceType));
 
         // File contents...
-        $this->replaceInFile('@extends($layout)', '@extends(\'trs::'.$layout.'\')', resource_path('views/'.$resource.'/'.$resourceType));
+        $this->replaceInFile('@extends($layout)', '@extends(\''.$layout.'\')', resource_path('views/'.$resource.'/'.$resourceType));
 
         $this->replaceInFile('{{ $content }}', file_get_contents(__DIR__.'/../../resources/'.$stack.'/components/'.$content), resource_path('views/'.$resource.'/'.$resourceType));
     }
