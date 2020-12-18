@@ -45,11 +45,14 @@ class ServiceProvider extends BaseServiceProvider
     {
         // Tailwind
         $this->callAfterResolving(BladeCompiler::class, function () {
+            $this->registerTailwindComponent('button');
             $this->registerTailwindComponent('footer-nav-group');
             $this->registerTailwindComponent('footer-nav-group-heading');
             $this->registerTailwindComponent('footer-nav-group-list');
             $this->registerTailwindComponent('footer-nav-group-list-item');
             $this->registerTailwindComponent('form');
+            $this->registerTailwindComponent('input');
+            $this->registerTailwindComponent('label');
             $this->registerTailwindComponent('subscribe-form');
             $this->registerTailwindComponent('table');
         });

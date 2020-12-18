@@ -2,30 +2,37 @@
     <div class="w-11/12 p-12 bg-white sm:w-8/12 md:w-1/2 lg:w-5/12 shadow-md">
         <h1 class="text-xl font-semibold">Hello there 👋, <span class="font-normal">please fill in your information to continue</span></h1>
     
-        <form class="mt-6 grid grid-cols-1 gap-1" method="POST">
+        <form class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3" method="POST">
             @csrf
-            <div class="grid grid-cols-1 sm:grid-cols-2 justify-between gap-x-3">
-                <span class="col-span-1">
-                    <label for="firstname" class="block text-xs font-semibold text-gray-600 uppercase">Firstname</label>
-                    <input id="firstname" type="text" name="firstname" placeholder="John" autocomplete="given-name" class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
-                </span>
 
-                <span class="col-span-1">
-                    <label for="lastname" class="block text-xs font-semibold text-gray-600 uppercase">Lastname</label>
-                    <input id="lastname" type="text" name="lastname" placeholder="Doe" autocomplete="family-name" class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
-                </span>
+            <div class="col-span-1">
+                <x-trs-label for="firstname" value="Firstname" />
+                <x-trs-input id="firstname" type="text" name="firstname" placeholder="John" autocomplete="given-name" required />
             </div>
 
-            <label for="email" class="block mt-2 text-xs font-semibold text-gray-600 uppercase">E-mail</label>
-            <input id="email" type="email" name="email" placeholder="john.doe@company.com" autocomplete="email" class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
+            <div class="col-span-1">
+                <x-trs-label for="firstname" value="Lastname" />
+                <x-trs-input id="lastname" type="text" name="lastname" placeholder="Doe" autocomplete="family-name" required />
+            </div>
+
+            <div class="col-span-1 sm:col-span-2">
+                <x-trs-label for="email" value="Email" />
+                <x-trs-input id="email" type="email" name="email" placeholder="john.doe@company.com" autocomplete="email" required />
+            </div>
             
-            <label for="password" class="block mt-2 text-xs font-semibold text-gray-600 uppercase">Password</label>
-            <input id="password" type="password" name="password" placeholder="********" autocomplete="new-password" class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
+            <div class="col-span-1 sm:col-span-2">
+                <x-trs-label for="password" value="Password" />
+                <x-trs-input id="password" type="password" name="password" placeholder="********" autocomplete="new-password" required />
+            </div>
             
-            <label for="password-confirm" class="block mt-2 text-xs font-semibold text-gray-600 uppercase">Confirm password</label>
-            <input id="password-confirm" type="password" name="password-confirm" placeholder="********" autocomplete="new-password" class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
+            <div class="col-span-1 sm:col-span-2">
+                <x-trs-label for="password-confirm" value="Confirm Password" />
+                <x-trs-input id="password-confirm" type="password" name="password-confirm" placeholder="********" autocomplete="new-password" required />
+            </div>
             
-            <button type="submit" class="w-full py-3 mt-6 font-medium tracking-widest text-white uppercase bg-black shadow-lg focus:outline-none hover:bg-gray-700 hover:shadow-none transition-all duration-300 ease-in-out">Sign up</button>
+            <x-trs-button>
+                Sign Up
+            </x-trs-button>
             
             <a href="#" class="flex justify-between mt-4 text-xs text-gray-500 cursor-pointer hover:text-black transition-all duration-300 ease-in-out">Already registered?</a>
         </form>
