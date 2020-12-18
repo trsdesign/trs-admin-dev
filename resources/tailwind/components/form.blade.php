@@ -3,7 +3,7 @@
         <h1 class="text-xl font-semibold">Hello there 👋, <span class="font-normal">please fill in your information to continue</span></h1>
     
         <form class="mt-6 grid grid-cols-1 gap-1" method="POST">
-            @crsf
+            @csrf
             <div class="grid grid-cols-1 sm:grid-cols-2 justify-between gap-x-3">
                 <span class="col-span-1">
                     <label for="firstname" class="block text-xs font-semibold text-gray-600 uppercase">Firstname</label>

@@ -5,6 +5,7 @@
         <h1 class="h4 font-weight-bold">Hello there 👋, <span class="font-weight-normal">please fill in your information to continue</span></h1>
     
         <form class="mt-3" method="POST">
+            @csrf
             <div class="row">
                 <div class="form-group col-md-6">
                     <label for="firstname" class="">Firstname</label>
