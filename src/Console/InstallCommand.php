@@ -100,6 +100,9 @@ class InstallCommand extends Command
         // Update Configuration...
         $this->replaceInFile('bootstrap', 'tailwind', config_path('trs-admin.php'));
 
+        // Webpack...
+        copy(__DIR__.'/../../stubs/resources/tailwind/webpack.mix.js', base_path('webpack.mix.js'));
+
         // Tailwind config...
         copy(__DIR__.'/../../stubs/resources/tailwind/tailwind.config.js', base_path('tailwind.config.js'));
 
