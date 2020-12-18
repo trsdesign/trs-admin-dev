@@ -1,5 +1,6 @@
 {
     "name": "trsdesign/trs-admin-dev",
+    "description": "Frontend scaffolding package for Laravel",
     "license": "MIT",
     "authors": [
         {
