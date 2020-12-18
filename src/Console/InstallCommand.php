@@ -76,7 +76,10 @@ class InstallCommand extends Command
         copy(__DIR__.'/../../stubs/resources/bootstrap/js/bootstrap.js', resource_path('js/bootstrap.js'));
 
         // Files
+        (new Filesystem)->ensureDirectoryExists(resource_path('views/partials'));
         (new Filesystem)->ensureDirectoryExists(resource_path('views/layouts'));
+        
+        (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/resources/boostrap/views/partials', resource_path('views/layouts'));
         (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/resources/boostrap/views/layouts', resource_path('views/layouts'));
     }
 
@@ -107,7 +110,10 @@ class InstallCommand extends Command
         copy(__DIR__.'/../../stubs/resources/tailwind/tailwind.config.js', base_path('tailwind.config.js'));
 
         // Files
+        (new Filesystem)->ensureDirectoryExists(resource_path('views/partials'));
         (new Filesystem)->ensureDirectoryExists(resource_path('views/layouts'));
+        
+        (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/resources/tailwind/views/partials', resource_path('views/layouts'));
         (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/resources/tailwind/views/layouts', resource_path('views/layouts'));
     }
 
