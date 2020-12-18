@@ -35,7 +35,7 @@ class InstallCommand extends Command
         // Publish...
         $this->callSilent('vendor:publish', ['--tag' => 'trs-admin-config', '--force' => true]);
 
-        if (! in_array($this->argument('stack'), ['bootstrap', 'taildind'])) {
+        if (! in_array($this->argument('stack'), ['bootstrap', 'tailwind'])) {
             throw new InvalidArgumentException('Invalid stack.');
         }
 
