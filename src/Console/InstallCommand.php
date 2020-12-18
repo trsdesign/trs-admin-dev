@@ -96,7 +96,6 @@ class InstallCommand extends Command
                 '@tailwindcss/ui' => '^0.7.2',
                 '@tailwindcss/forms' => '^0.2.1',
                 '@tailwindcss/typography' => '^0.3.1',
-                'autoprefixer' => '^9.8.6',
                 'postcss-import' => '^12.0.1',
                 'tailwindcss' => 'npm:@tailwindcss/postcss7-compat@^2.0.1',
             ] + $packages;
