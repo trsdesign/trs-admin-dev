@@ -31,7 +31,7 @@ class ServiceProvider extends BaseServiceProvider
         $this->configurePublishing();
         $this->configureCommands();
 
-        $this->configureComponents(config('trs-admin.stack'));
+        $this->configureTailwindComponents(config('trs-admin.stack'));
 
         Blade::component('trs::bootstrap.components.form', 'trs-form');
     }
@@ -41,24 +41,29 @@ class ServiceProvider extends BaseServiceProvider
      *
      * @return void
      */
-    protected function configureComponents($cssPreset)
+    protected function configureTailwindComponents()
     {
-        $this->callAfterResolving(BladeCompiler::class, function () use ($cssPreset) {
-            $this->registerComponent($cssPreset, 'form');
-            $this->registerComponent($cssPreset, 'table');
+        // Tailwind
+        $this->callAfterResolving(BladeCompiler::class, function () {
+            $this->registerTailwindComponent('footer-nav-group');
+            $this->registerTailwindComponent('footer-nav-group-heading');
+            $this->registerTailwindComponent('footer-nav-group-list');
+            $this->registerTailwindComponent('footer-nav-group-list-item');
+            $this->registerTailwindComponent('form');
+            $this->registerTailwindComponent('subscribe-form');
+            $this->registerTailwindComponent('table');
         });
     }
 
     /**
      * Register the given component.
      *
-     * @param  string  $cssPreset
      * @param  string  $component
      * @return void
      */
-    public function registerComponent(string $cssPreset, string $component)
+    public function registerTailwindComponent(string $component)
     {
-        Blade::component('trs::'.$cssPreset.'.components.'.$component, 'trs-'.$component);
+        Blade::component('trs::tailwind.components.'.$component, 'trs-'.$component);
     }
 
     /**
@@ -77,7 +82,7 @@ class ServiceProvider extends BaseServiceProvider
         ], 'trs-admin-config');
 
         $this->publishes([
-            __DIR__.'/../resources/views' => resource_path('views/vendor/trs-admin'),
+            __DIR__.'/../resources/'.config('trs-admin.stack').'/views' => resource_path('views/vendor/trs-admin'),
         ], 'trs-admin-views');
     }
 

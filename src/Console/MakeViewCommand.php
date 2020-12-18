@@ -49,7 +49,10 @@ class MakeViewCommand extends Command
 
         // File contents...
         $this->replaceInFile('@extends($layout)', '@extends(\'layouts.'.$layout.'\')', resource_path('views/'.$resource.'/'.$resourceType));
+        $this->replaceInFile('{{ $content }}', file_get_contents(__DIR__.'/../../resources/'.$stack.'/views/components/'.$content), resource_path('views/'.$resource.'/'.$resourceType));
 
-        $this->replaceInFile('{{ $content }}', file_get_contents(__DIR__.'/../../resources/'.$stack.'/components/'.$content), resource_path('views/'.$resource.'/'.$resourceType));
+        if (! file_exists(app_path('Models/User.php'))) {
+            $this->call('make:model', ['a']);
+        }
     }
 }
