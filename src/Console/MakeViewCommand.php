@@ -50,6 +50,6 @@ class MakeViewCommand extends Command
         // File contents...
         $this->replaceInFile('@extends($layout)', '@extends(\'trs::'.$layout.'\')', resource_path('views/'.$resource.'/'.$resourceType));
 
-        $this->replaceInFile('{{ $content }}', file_get_contents(__DIR__.'/../../resources/'.$stack.'/'.$content), resource_path('views/'.$resource.'/'.$resourceType));
+        $this->replaceInFile('{{ $content }}', file_get_contents(__DIR__.'/../../resources/components/'.$stack.'/'.$content), resource_path('views/'.$resource.'/'.$resourceType));
     }
 }
