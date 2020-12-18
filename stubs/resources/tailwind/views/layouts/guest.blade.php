@@ -15,11 +15,13 @@
     </head>
 
     <body class="antialiased bg-gray-100">
-        @include('trs::header')
+        @include('partials.header')
+
+        @include('partials.navigation-menu')
 
         @yield('content')
 
-        @include('trs::footer')
+        @include('partials.footer')
 
         @stack('footer-scripts')
     </body>
