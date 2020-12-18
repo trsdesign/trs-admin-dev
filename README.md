@@ -1,6 +1,6 @@
 <p align="center">
     <a href="https://github.com/trsdesign/trs-admin-dev/actions">
-        <img src="https://github.com/trsdsign/trs-admin-dev/workflows/tests/badge.svg" alt="Build Status">
+        <img src="https://github.com/trsdesign/trs-admin-dev/workflows/tests/badge.svg" alt="Build Status">
     </a>
 </p>
 
