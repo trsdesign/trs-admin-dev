@@ -1,6 +1,6 @@
+# Trs Admin
+
 <p align="center">
-    <h1>Trs Admin</h1>
-    <br />
     <a href="https://github.com/trsdesign/trs-admin-dev/actions">
         <img src="https://github.com/trsdesign/trs-admin-dev/workflows/tests/badge.svg" alt="Build Status">
     </a>
