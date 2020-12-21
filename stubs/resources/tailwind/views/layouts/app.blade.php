@@ -20,7 +20,7 @@
 
     </head>
 
-    <body class="antialiased bg-gray-100">
+    <body class="antialiased">
         @include('partials.header')
 
         @include('partials.navigation-menu')
